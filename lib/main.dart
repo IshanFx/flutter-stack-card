@@ -71,14 +71,27 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Positioned(
               top: 30,
-              child: Card(
-                elevation: 12,
-                color: Color.fromARGB(255, 200, 0, 0),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                child: Container(
-                  width: 240,
-                  height: 300,
+              child: Draggable(
+                  childWhenDragging: Container(),
+                  feedback: Card(
+                  elevation: 12,
+                  color: Color.fromARGB(255, 200, 0, 0),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Container(
+                    width: 240,
+                    height: 300,
+                  ),
+                ),
+                  child: Card(
+                  elevation: 12,
+                  color: Color.fromARGB(255, 200, 0, 0),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Container(
+                    width: 240,
+                    height: 300,
+                  ),
                 ),
               ),
             )
